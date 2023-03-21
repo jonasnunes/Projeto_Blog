@@ -1,0 +1,249 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    min-height: 100vh;
+    position: relative;
+}
+
+main{
+    margin-bottom: 15rem;
+}
+
+/* NAVBAR */
+header a.logo{
+    position: absolute;
+    top: 10px;
+    left: 9.5%;
+}
+
+header nav ul.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #161616;
+    padding: 1.5rem;
+    gap: 1.2rem;
+    text-transform: uppercase;
+}
+
+header nav ul.nav-bar li a.nav-link{
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+    font-size: .8rem;
+}
+
+header nav ul.nav-bar li a.nav-link:hover{
+    opacity: .5;
+}
+
+/* HOME */
+section.title-container{
+    min-width: 500px;
+    text-align: center;
+    margin-top: 1.875rem;
+}
+
+section.title-container h1{
+    font-size: 3.125rem;
+}
+
+section.title-container p{
+    margin-top: .625rem;
+    text-transform: uppercase;
+    color: #999;
+}
+
+section.posts-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0.625rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.posts-container div.post-box:first-child{
+    min-width: 95%;
+}
+
+section.posts-container div.post-box{
+    flex: 1 1 0;
+    margin: 0 1%;
+    margin-bottom: 1.25rem;
+}
+
+section.posts-container div.post-box img{
+    width: 100%;
+}
+
+section.posts-container div.post-box h2.post-title{
+    font-size: 1.5rem;
+    margin: 0.625rem 0;
+}
+
+section.posts-container div.post-box h2.post-title a{
+    color: #000;
+    transition: .5s;
+}
+
+section.posts-container div.post-box h2.post-title a:hover{
+    opacity: .7;
+}
+
+section.posts-container div.post-box p.post-description{
+    color: #666;
+}
+
+section.posts-container div.post-box div.tags-container{
+    margin-top: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+}
+
+section.posts-container div.post-box div.tags-container a{
+    font-size: 0.875rem;
+    color: #333;
+}
+
+/* PÁGINA DE POSTS */
+main.post-container{
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: "main sidebar";
+    gap: 0.625rem;
+    padding-top: 1.875rem;
+    max-width: 1200px;
+    margin-top: 0;
+    margin-inline: 5rem;
+    margin-bottom: 15.625rem;
+}
+
+main.post-container div.content-container{
+    grid-area: main;
+}
+
+main.post-container div.content-container h1.main-title{
+    font-size: 2.25rem;
+    margin-bottom: 1.875rem;
+}
+
+main.post-container div.content-container p.post-description{
+    font-style: italic;
+    margin-bottom: 2.5rem;
+}
+
+main.post-container div.content-container div.img-container{
+    margin-bottom: 1.875rem;
+}
+
+main.post-container div.content-container div.img-container img{
+    width: 60%;
+}
+
+main.post-container div.content-container p.post-content{
+    line-height: 1.8;
+    margin: 0.625rem 0;
+}
+
+/* POST ASIDE */
+main.post-container aside.nav-container{
+    grid-area: sidebar;
+}
+
+main.post-container aside.nav-container h3.tags-title,
+main.post-container aside.nav-container h3.categories-title{
+    font-size: 1.5rem;
+    margin-bottom: 0.625rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 0.625rem;
+    font-weight: 300;
+}
+
+main.post-container aside.nav-container ul.tag-list li,
+main.post-container aside.nav-container ul.categories-list li{
+    margin-bottom: 0.625rem;
+}
+
+main.post-container aside.nav-container ul.tag-list li a,
+main.post-container aside.nav-container ul.categories-list li a{
+    color: #666;
+    transition: .5s;
+}
+
+main.post-container aside.nav-container ul.tag-list li a:hover,
+main.post-container aside.nav-container ul.categories-list li a:hover{
+    color: #000
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-block: 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+footer p{
+    text-align: center;
+}
+
+/* MOBILE */
+@media(max-width: 480px){
+
+    /* HOME */
+    header{
+        width: 100%;
+    }
+
+    header a.logo{
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        left: 0;
+        width: 50px;
+    }
+
+    header nav ul.nav-bar{
+        display: none;
+    }
+
+    main section.title-container{
+        min-width: 100%;
+        margin-top: 1.25rem;
+    }
+
+    main section.posts-container{
+        margin-top: 1.25rem;
+    }
+
+    main section.posts-container div.post-box{
+        flex: 100% 1 0;
+        padding: 0.9375rem;
+        margin: 0;
+    }
+
+    /* POST */
+    main.post-container{
+        grid-template-columns: 100%;
+        padding: 0.9375rem;
+        grid-template-areas: "main"
+        "sidebar";
+    }
+
+    main.post-container div.content-container div.img-container img{
+        width: 100%;
+    }
+
+}
