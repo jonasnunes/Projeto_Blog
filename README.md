@@ -18,7 +18,7 @@
 
 ## Descrição do projeto:
 
-* Projeto bem simples feito no curso do Matheus Battisti onde foi feita a estruturação da página usando a linguagem de marcação HTML e estilizada com a linguagem CSS
+* Projeto bem simples onde foi feita a estruturação da página usando a linguagem de marcação HTML e estilizada com a linguagem CSS
 * Com PHP foi usado um recurso muito interessante que foi o de reaproveitar templates, foram feitas páginas contendo o cabeçalho da página e o rodapé, assim foi feito o reaproveitamento do código aumentando a produtividade
 * Nesse projeto não teve conexão com banco de dados, os dados foram guardados em arrays em arquivos php
 * A fonte usada no projeto foi retirada do Google Fonts, os links foram colocados em um array e depois lançados no index.php através de um foreach
